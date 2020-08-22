@@ -2,7 +2,7 @@ import firebase from "./firebase";
 
 const messaging = firebase.messaging();
 
-export function initNotification() {
+export function getNotifications() {
   Notification.requestPermission().then((permission) => {
     console.log(permission);
     if (permission === "granted") {

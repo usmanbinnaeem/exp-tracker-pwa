@@ -31,7 +31,7 @@ const ExpandPanel = () => {
   const classes = useStyles();
 
   return (
-    <>
+    <div>
       <Box m={2}>
         <Accordion>
           <AccordionSummary
@@ -49,7 +49,7 @@ const ExpandPanel = () => {
           </AccordionDetails>
         </Accordion>
       </Box>
-    </>
+    </div>
   );
 };
 

@@ -1,6 +1,14 @@
-const cacheName = "v1";
+const cacheName = "exp-app-v1";
 
-const cacheAssets = ["./", "index.html"];
+const cacheAssets = [
+  "./",
+  "index.html",
+  "favicon.ico",
+  "manifest.json",
+  "./static/js/bundle.js",
+  "./static/js/main.chunk.js",
+  "./static/js/0.chunk.js",
+];
 
 self.addEventListener("install", (e) => {
   console.log("Service Worker: Installed");

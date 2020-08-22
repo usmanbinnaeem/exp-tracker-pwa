@@ -2,7 +2,6 @@ import React from "react";
 import Header from "./Components/Header";
 import Balance from "./Components/Balance";
 import IncomeExpenses from "./Components/IncomeExpenses";
-// import TransactionList from "./Components/TransactionList";
 import AddTransaction from "./Components/AddTransaction";
 import ExpandPanel from "./Components/Expandhistory";
 import { Button } from "@material-ui/core";
@@ -12,7 +11,7 @@ import Grid from "@material-ui/core/Grid";
 
 import "./App.css";
 import { GlobalProvider } from "./context/GlobalState";
-import { initNotification } from "./Notifications";
+import { getNotifications } from "./Notifications";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -41,7 +40,7 @@ function ExpenseTracker(): JSX.Element {
           <Grid item xs={8}>
             <Paper className={classes.paper}>
               <h2>Do you want to get notisfications from ExpenseTracker</h2>
-              <Button onClick={initNotification}>If Yes? click me</Button>
+              <Button onClick={getNotifications}>If Yes? click me</Button>
             </Paper>
           </Grid>
         </Grid>

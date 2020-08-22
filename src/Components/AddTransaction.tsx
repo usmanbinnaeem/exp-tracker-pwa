@@ -1,15 +1,7 @@
 import React, { useState, useContext } from "react";
-import { useForm } from "react-hook-form";
 import { GlobalContext } from "../context/GlobalState";
 
 const AddTransaction = () => {
-  type Inputs = {
-    name: string;
-    amount: string;
-    // transactionType: TransactionType;
-  };
-
-  const { register } = useForm<Inputs>();
   const [text, setText] = useState("");
   const [amount, setAmount] = useState(0);
   const { addTransaction } = useContext(GlobalContext);
@@ -35,7 +27,6 @@ const AddTransaction = () => {
           <label htmlFor="text">Text</label>
           <input
             type="text"
-            ref={register({ required: true })}
             value={text}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
               setText(e.target.value);
@@ -50,7 +41,6 @@ const AddTransaction = () => {
           </label>
           <input
             type="number"
-            ref={register({ required: true, min: 1 })}
             value={amount}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
               setAmount(parseFloat(e.target.value));
